@@ -1,0 +1,6 @@
+@use "../../variables/variables";
+
+:root {
+  --header-height: 132px;
+  --outline-color: #{variables.$color-4b5563};
+}
