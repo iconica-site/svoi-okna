@@ -1,0 +1,68 @@
+@use "../../../functions/functions";
+@use "../../../mixins/mixins";
+@use "../../../variables/variables";
+
+.advantages {
+  padding-block: 50px;
+  background-color: variables.$color-fafcfe;
+
+  // .advantages__title
+  &__title {
+    margin-block-end: 30px;
+  }
+}
+
+.advantages-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 9px;
+
+  // .advantages-list__item
+  &__item {
+  }
+}
+
+.advantage-card {
+  padding: 30px;
+  background-color: variables.$color-f3faff;
+  border-radius: 10px;
+
+  // .advantage-card__image
+  &__image {
+    aspect-ratio: 334 / 216;
+    margin-block-end: 30px;
+    font-size: 0;
+    border-radius: 10px;
+  }
+
+  // .advantage-card__title
+  &__title {
+    margin-block-end: 7px;
+  }
+
+  // .advantage-card__text
+  &__text {
+    letter-spacing: -0.01em;
+  }
+}
+
+.advantage-title {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: -0.01em;
+  color: variables.$color-404040;
+
+  // .advantage-title__icon
+  &__icon {
+    flex: 0 0 auto;
+    font-size: 0;
+    color: variables.$color-f81255;
+  }
+
+  // .advantage-title__text
+  &__text {
+  }
+}
