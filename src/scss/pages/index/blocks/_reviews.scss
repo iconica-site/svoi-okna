@@ -1,0 +1,22 @@
+@use "../../../functions/functions";
+@use "../../../mixins/mixins";
+@use "../../../variables/variables";
+
+.reviews {
+  padding-block: 50px 35px;
+
+  // .reviews__title
+  &__title {
+    margin-block-end: 30px;
+  }
+
+  // .reviews__image
+  &__image {
+    aspect-ratio: 1199.37 / 483;
+    font-size: 0;
+
+    img {
+      object-fit: contain;
+    }
+  }
+}
