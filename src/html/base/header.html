@@ -1,25 +1,96 @@
 <header class="header" id="header" data-header="header" data-burger="wrapper">
   <div class="header__wrapper container" data-header="wrapper">
-    <div class="header__inner">
+    <div class="header__main">
       <div class="header-logo">
-        <a class="header-logo__image ibg" href="#">
-          <!-- <img src="@img" alt="Лого"> -->
+        <a class="header-logo__image responsive-media" href="#" aria-current="page">
+          <img src="@img/logo.png" alt="Главная">
         </a>
       </div>
-      <button class="burger-button" data-burger="button">
-        <span class="burger-button__line burger-button__line--top"></span>
-        <span class="burger-button__line burger-button__line--center"></span>
-        <span class="burger-button__line burger-button__line--bottom"></span>
-      </button>
-      <div class="header-nav" data-burger="menu">
-        <nav class="header-nav__inner" aria-label="Главная навигация">
-          <ul class="header-nav__list">
-            <li class="header-nav__item">
-              <a class="header-nav__link" href="#">link</a>
-            </li>
-          </ul>
-        </nav>
+      <ul class="header__contacts header-contacts">
+        <li class="header-contacts__item">
+          <a class="header-link" href="#" target="_blank" rel="noopener noreferrer">
+            <span class="header-link__icon" aria-hidden="true">
+              <svg width="12" height="12">
+                <use xlink:href="#icon-pin"></use>
+              </svg>
+            </span>
+            <span class="header-link__text">г.&nbsp;Екатеринбург</span>
+          </a>
+          <div class="header-contacts__caption">пр.&nbsp;Космонавтов 54, 2&nbsp;этаж, ТЦ&nbsp;Космос</div>
+        </li>
+        <li class="header-contacts__item">
+          <a class="header-link" href="#" target="_blank" rel="noopener noreferrer">
+            <span class="header-link__icon" aria-hidden="true">
+              <svg width="12" height="12">
+                <use xlink:href="#icon-pin"></use>
+              </svg>
+            </span>
+            <span class="header-link__text">г.&nbsp;Верхняя Пышма</span>
+          </a>
+          <div class="header-contacts__caption">пр.&nbsp;Успенский 125, офис 305</div>
+        </li>
+        <li class="header-contacts__item">
+          <a class="header-link" href="tel:+734331310356">
+            <span class="header-link__icon" aria-hidden="true">
+              <svg width="12" height="12">
+                <use xlink:href="#icon-pin"></use>
+              </svg>
+            </span>
+            <span class="header-link__text">+7&nbsp;343&nbsp;311-03-56</span>
+          </a>
+          <div class="header-contacts__caption">пн–пт с&nbsp;09:00&nbsp;до&nbsp;17:30</div>
+        </li>
+      </ul>
+      <div class="header-buttons">
+        <a class="header-button" href="#">
+          <span class="header-button__icon" aria-hidden="true">
+            <svg width="16" height="16">
+              <use xlink:href="#icon-calculator"></use>
+            </svg>
+          </span>
+          <span class="header-button__text">Калькулятор</span>
+        </a>
+        <a class="header-button header-button--blue" href="#">Бесплатный замер</a>
       </div>
     </div>
+    <div class="header-nav" data-burger="menu">
+      <nav class="header-nav__inner" aria-label="Главная навигация">
+        <ul class="header-nav__list">
+          <li class="header-nav__item">
+            <a class="nav-button" href="#">Окна</a>
+          </li>
+          <li class="header-nav__item">
+            <a class="nav-button" href="#">Двери</a>
+          </li>
+          <li class="header-nav__item">
+            <a class="nav-button" href="#">Фасадное остекление</a>
+          </li>
+          <li class="header-nav__item">
+            <a class="nav-button" href="#">Балконы и лоджии</a>
+          </li>
+          <li class="header-nav__item">
+            <a class="nav-button" href="#">Производство</a>
+          </li>
+          <li class="header-nav__item">
+            <a class="nav-button" href="#">Контакты</a>
+          </li>
+          <li class="header-nav__item">
+            <a class="nav-button" href="#">
+              <span class="nav-button__icon" aria-hidden="true">
+                <svg width="20" height="20">
+                  <use xlink:href="#icon-burger"></use>
+                </svg>
+              </span>
+              <span class="nav-button__text">Меню</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- <button class="burger-button" data-burger="button">
+      <span class="burger-button__line burger-button__line--top"></span>
+      <span class="burger-button__line burger-button__line--center"></span>
+      <span class="burger-button__line burger-button__line--bottom"></span>
+    </button> -->
   </div>
 </header>

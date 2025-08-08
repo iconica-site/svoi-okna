@@ -1,0 +1,212 @@
+@use "../../functions/functions";
+@use "../../mixins/mixins";
+@use "../../variables/variables";
+
+.header {
+  // .header__wrapper
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-block: 15px;
+    background-color: variables.$color-white;
+  }
+
+  // .header__main
+  &__main {
+    display: flex;
+    align-items: center;
+    gap: 63px;
+  }
+
+  // .header__contacts
+  &__contacts {
+    flex: 1 1 auto;
+  }
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+
+  // .header-logo__image
+  &__image {
+    flex: 0 0 auto;
+    inline-size: 120px;
+    aspect-ratio: 120 / 40;
+    font-size: 0;
+
+    img {
+      object-fit: contain;
+    }
+  }
+}
+
+.header-contacts {
+  display: flex;
+  gap: 20px;
+  letter-spacing: -0.01em;
+
+  // .header-contacts__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 3px;
+  }
+
+  // .header-contacts__caption
+  &__caption {
+    font-size: 11px;
+  }
+}
+
+.header-link {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-weight: 500;
+  font-size: 12px;
+  color: variables.$color-404040;
+
+  @include mixins.prefers-reduced-motion {
+    transition-property: color;
+    transition-duration: 0.3s;
+  }
+
+  @include mixins.hover {
+    color: variables.$color-f81255;
+  }
+
+  // .header-link__icon
+  &__icon {
+    flex: 0 0 auto;
+    font-size: 0;
+    color: variables.$color-f81255;
+  }
+
+  // .header-link__text
+  &__text {
+  }
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.header-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  min-block-size: 47px;
+  padding-block: 5px;
+  padding-inline: 30px;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: var(--header-button-color);
+  background-color: var(--header-button-background-color, #{variables.$color-f3faff});
+  border-radius: 5px;
+
+  // .header-button--blue
+  &--blue {
+    --header-button-color: #{variables.$color-white};
+    --header-button-color-hover: #{variables.$color-4b5563};
+    --header-button-background-color: #{variables.$color-accent};
+    --header-button-background-color-hover: #{variables.$color-f3faff};
+    --header-button-icon-color: #{variables.$color-white};
+    --header-button-icon-color-hover: #{variables.$color-accent};
+  }
+
+  @include mixins.prefers-reduced-motion {
+    transition-property: color, background-color;
+    transition-duration: 0.3s;
+  }
+
+  @include mixins.hover {
+    --header-button-color: var(--header-button-color-hover, #{variables.$color-white});
+    --header-button-background-color: var(--header-button-background-color-hover, #{variables.$color-accent});
+    --header-button-icon-color: var(--header-button-icon-color-hover, #{variables.$color-white});
+  }
+
+  // .header-button__icon
+  &__icon {
+    flex: 0 0 auto;
+    font-size: 0;
+    color: var(--header-button-icon-color, #{variables.$color-accent});
+
+    @include mixins.prefers-reduced-motion {
+      transition-property: color;
+      transition-duration: 0.3s;
+    }
+  }
+
+  // .header-button__text
+  &__text {
+  }
+}
+
+.header-nav {
+  // .header-nav__inner
+  &__inner {
+  }
+
+  // .header-nav__list
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  // .header-nav__item
+  &__item {
+    flex: 1 1 auto;
+  }
+}
+
+.nav-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  min-block-size: 40px;
+  padding-block: 5px;
+  padding-inline: 25px;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: var(--nav-button-color);
+  background-color: var(--nav-button-background-color, variables.$color-f9fafb);
+  border-radius: 5px;
+
+  &:has(.nav-button__icon) {
+    --nav-button-background-color: #{variables.$color-f3faff};
+  }
+
+  @include mixins.prefers-reduced-motion {
+    transition-property: color, background-color;
+    transition-duration: 0.3s;
+  }
+
+  @include mixins.hover {
+    --nav-button-color: var(--nav-button-color-hover, #{variables.$color-white});
+    --nav-button-background-color: var(--nav-button-background-color-hover, #{variables.$color-accent});
+    --nav-button-icon-color: var(--nav-button-icon-color-hover, #{variables.$color-white});
+  }
+
+  // .nav-button__icon
+  &__icon {
+    flex: 0 0 auto;
+    font-size: 0;
+    color: var(--nav-button-icon-color, variables.$color-accent);
+  }
+
+  // .nav-button__text
+  &__text {
+  }
+}
