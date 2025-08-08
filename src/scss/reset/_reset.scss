@@ -79,6 +79,7 @@
 
 :where(html) {
   scroll-padding-block-start: variables.$header-height;
+  scrollbar-gutter: stable;
 
   @include mixins.prefers-reduced-motion {
     interpolate-size: allow-keywords;
