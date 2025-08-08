@@ -1,0 +1,73 @@
+@use "../../../functions/functions";
+@use "../../../mixins/mixins";
+@use "../../../variables/variables";
+
+.contacts {
+  position: relative;
+  isolation: isolate;
+  padding-block: 50px;
+
+  // .contacts__map
+  &__map {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    font-size: 0;
+  }
+}
+
+.contacts-address {
+  max-inline-size: 417px;
+  padding-block: 33px 40px;
+  padding-inline: 40px;
+  background-color: variables.$color-white;
+  border-radius: 20px;
+
+  // .contacts-address__title
+  &__title {
+    margin-block-end: 30px;
+  }
+}
+
+.contacts-list {
+  // .contacts-list__item
+  &__item {
+    &:not(:last-child) {
+      margin-block-end: 20px;
+    }
+  }
+}
+
+.contacts-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  letter-spacing: -0.01em;
+  color: variables.$color-black;
+
+  // .contacts-link--start
+  &--start {
+    align-items: start;
+    gap: 11px;
+  }
+
+  @include mixins.prefers-reduced-motion {
+    transition-property: color;
+    transition-duration: 0.3s;
+  }
+
+  @include mixins.hover {
+    color: variables.$color-accent;
+  }
+
+  // .contacts-link__icon
+  &__icon {
+    flex: 0 0 auto;
+    font-size: 0;
+    color: variables.$color-accent;
+  }
+
+  // .contacts-link__text
+  &__text {
+  }
+}
