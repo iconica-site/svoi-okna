@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 5px;
+  gap: var(--slider-arrows-gap, 5px);
 
   &:has(:is(.swiper-button-lock, .swiper-button-disabled) + :is(.swiper-button-lock, .swiper-button-disabled)) {
     display: none;
@@ -18,7 +18,7 @@
     justify-content: center;
     align-items: center;
     flex: 0 0 auto;
-    inline-size: 50px;
+    inline-size: var(--slider-arrow-width, 50px);
     aspect-ratio: 1 / 1;
     font-size: 0;
     color: variables.$color-accent;
