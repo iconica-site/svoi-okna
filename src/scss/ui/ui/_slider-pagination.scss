@@ -1,0 +1,43 @@
+@use "../../functions/functions";
+@use "../../mixins/mixins";
+@use "../../variables/variables";
+
+.slider-pagination {
+  --swiper-pagination-bullet-horizontal-gap: 2.5px;
+  --swiper-pagination-color: #{variables.$color-white};
+  --swiper-pagination-bullet-width: 60px;
+  --swiper-pagination-bullet-height: 5px;
+  --swiper-pagination-bullet-border-radius: 30px;
+  --swiper-pagination-bullet-inactive-color: #{variables.$color-white};
+  --swiper-pagination-bullet-inactive-opacity: 0.3;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  row-gap: 5px;
+
+  &.swiper-pagination-lock {
+    display: none;
+  }
+
+  .swiper-pagination-bullet {
+    flex: 0 0 auto;
+    font-size: 0;
+
+    &:not(&-active) {
+      @include mixins.hover {
+        opacity: 0.75;
+      }
+    }
+
+    &-active {
+      cursor: default;
+    }
+
+    @include mixins.prefers-reduced-motion {
+      transition-property: opacity;
+      transition-duration: 0.3s;
+    }
+  }
+}
