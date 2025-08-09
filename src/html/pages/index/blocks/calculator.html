@@ -1,0 +1,214 @@
+<section class="calculator container" id="section-calculator" aria-labelledby="title-calculator">
+  <h2 class="calculator__title h2" id="title-calculator"><mark class="h2__mark">Калькулятор</mark>&#32;стоимости окон</h2>
+  <form class="calculator-form" id="form-calculator" action="#">
+    <ul class="calculator-form__steps calculator-steps">
+      <li class="calculator-steps__item">
+        <fieldset class="calculator-steps__inner">
+          <legend class="calculator-steps__label">Выберите тип окон и укажите размер</legend>
+        </fieldset>
+      </li>
+      <li class="calculator-steps__item">
+        <fieldset class="calculator-steps__inner">
+          <legend class="calculator-steps__label">Нажмите на “+” для добавления функции открытия</legend>
+          <div class="windows">
+            <div class="windows__radios">
+              <div class="windows-radio">
+                <input class="windows-radio__input" id="windows-radio-1" name="windows-radio" type="radio" value="#" aria-label="#">
+                <span class="windows-radio__icon" aria-hidden="true">
+                  <svg width="22" height="31">
+                    <use xlink:href="#icon-window-1"></use>
+                  </svg>
+                </span>
+              </div>
+              <div class="windows-radio">
+                <input class="windows-radio__input" id="windows-radio-2" name="windows-radio" type="radio" value="#" aria-label="#" checked>
+                <span class="windows-radio__icon" aria-hidden="true">
+                  <svg width="30" height="31">
+                    <use xlink:href="#icon-window-2"></use>
+                  </svg>
+                </span>
+              </div>
+              <div class="windows-radio">
+                <input class="windows-radio__input" id="windows-radio-3" name="windows-radio" type="radio" value="#" aria-label="#">
+                <span class="windows-radio__icon" aria-hidden="true">
+                  <svg width="43" height="31">
+                    <use xlink:href="#icon-window-3"></use>
+                  </svg>
+                </span>
+              </div>
+              <div class="windows-radio">
+                <input class="windows-radio__input" id="windows-radio-4" name="windows-radio" type="radio" value="#" aria-label="#">
+                <span class="windows-radio__icon" aria-hidden="true">
+                  <svg width="45" height="43">
+                    <use xlink:href="#icon-window-4"></use>
+                  </svg>
+                </span>
+              </div>
+              <div class="windows-radio">
+                <input class="windows-radio__input" id="windows-radio-5" name="windows-radio" type="radio" value="#" aria-label="#">
+                <span class="windows-radio__icon" aria-hidden="true">
+                  <svg width="18" height="43">
+                    <use xlink:href="#icon-window-5"></use>
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <div class="windows-result">
+              <div class="windows-result__inner">
+                <div class="windows-result__image responsive-media">
+                  <img src="@img/images/pages/index/calculator/1.jpg" alt="#" loading="lazy">
+                </div>
+                <input class="windows-result__input windows-result__input--height" id="windows-result-height" name="windows-result-height" type="text" inputmode="numeric" value="700" placeholder="700"
+                  required>
+                <input class="windows-result__input windows-result__input--width" id="windows-result-width" name="windows-result-width" type="text" inputmode="numeric" value="1200" placeholder="1200"
+                  required>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </li>
+      <li class="calculator-steps__item">
+        <fieldset class="calculator-steps__inner">
+          <legend class="calculator-steps__label">Выберите дополнительные услуги и особенности</legend>
+          <div class="windows-additionally">
+            <div class="windows-additionally__item">
+              <div class="windows-additionally__label">Доп. материалы и услуги</div>
+              <div class="windows-additionally__selects windows-selects">
+                <div class="windows-selects__item">
+                  <label class="windows-selects__label windows-label" for="windows-selects-1">Отливы (мм)</label>
+                  <select class="windows-selects__select" id="windows-selects-1" name="windows-selects-1">
+                    <option value="Нет" selected>Нет</option>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                  </select>
+                </div>
+                <div class="windows-selects__item">
+                  <label class="windows-selects__label windows-label" for="windows-selects-2">Подоконник</label>
+                  <select class="windows-selects__select" id="windows-selects-2" name="windows-selects-2">
+                    <option value="Нет" selected>Нет</option>
+                    <option value="Есть">Есть</option>
+                  </select>
+                </div>
+                <div class="windows-selects__item">
+                  <label class="windows-selects__label windows-label" for="windows-selects-3">Откосы</label>
+                  <select class="windows-selects__select" id="windows-selects-3" name="windows-selects-3">
+                    <option value="Нет" selected>Нет</option>
+                    <option value="Есть">Есть</option>
+                  </select>
+                </div>
+              </div>
+              <div class="windows-additionally__lamination windows-lamination">
+                <div class="windows-lamination__item">
+                  <label class="windows-lamination__label windows-label" for="windows-lamination-radio-1">Ламинация снаружи</label>
+                  <div class="windows-lamination__radios">
+                    <div class="lamination-radio">
+                      <input class="lamination-radio__input" id="windows-lamination-radio-1" name="windows-lamination-radio-1" type="radio" value="#" checked>
+                    </div>
+                    <div class="lamination-radio">
+                      <input class="lamination-radio__input" id="windows-lamination-radio-2" name="windows-lamination-radio-1" type="radio" value="#">
+                      <div class="lamination-radio__icon responsive-media">
+                        <img src="@img/icons/pages/index/calculator/1.jpg" alt="#" loading="lazy">
+                      </div>
+                    </div>
+                    <div class="lamination-radio">
+                      <input class="lamination-radio__input" id="windows-lamination-radio-3" name="windows-lamination-radio-1" type="radio" value="#">
+                      <div class="lamination-radio__icon responsive-media">
+                        <img src="@img/icons/pages/index/calculator/2.jpg" alt="#" loading="lazy">
+                      </div>
+                    </div>
+                    <div class="lamination-radio">
+                      <input class="lamination-radio__input" id="windows-lamination-radio-4" name="windows-lamination-radio-1" type="radio" value="#">
+                      <div class="lamination-radio__icon responsive-media">
+                        <img src="@img/icons/pages/index/calculator/3.jpg" alt="#" loading="lazy">
+                      </div>
+                    </div>
+                    <div class="lamination-radio">
+                      <input class="lamination-radio__input" id="windows-lamination-radio-5" name="windows-lamination-radio-1" type="radio" value="#">
+                      <div class="lamination-radio__icon responsive-media">
+                        <img src="@img/icons/pages/index/calculator/4.jpg" alt="#" loading="lazy">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="windows-lamination__item">
+                  <label class="windows-lamination__label windows-label" for="windows-lamination-radio-2">Ламинация изнутри</label>
+                  <div class="windows-lamination__radios">
+                    <div class="lamination-radio">
+                      <input class="lamination-radio__input" id="windows-lamination-radio-6" name="windows-lamination-radio-2" type="radio" value="#" checked>
+                    </div>
+                    <div class="lamination-radio">
+                      <input class="lamination-radio__input" id="windows-lamination-radio-7" name="windows-lamination-radio-2" type="radio" value="#">
+                      <div class="lamination-radio__icon responsive-media">
+                        <img src="@img/icons/pages/index/calculator/5.jpg" alt="#" loading="lazy">
+                      </div>
+                    </div>
+                    <div class="lamination-radio">
+                      <input class="lamination-radio__input" id="windows-lamination-radio-8" name="windows-lamination-radio-2" type="radio" value="#">
+                      <div class="lamination-radio__icon responsive-media">
+                        <img src="@img/icons/pages/index/calculator/6.jpg" alt="#" loading="lazy">
+                      </div>
+                    </div>
+                    <div class="lamination-radio">
+                      <input class="lamination-radio__input" id="windows-lamination-radio-9" name="windows-lamination-radio-2" type="radio" value="#">
+                      <div class="lamination-radio__icon responsive-media">
+                        <img src="@img/icons/pages/index/calculator/7.jpg" alt="#" loading="lazy">
+                      </div>
+                    </div>
+                    <div class="lamination-radio">
+                      <input class="lamination-radio__input" id="windows-lamination-radio-10" name="windows-lamination-radio-2" type="radio" value="#">
+                      <div class="lamination-radio__icon responsive-media">
+                        <img src="@img/icons/pages/index/calculator/8.jpg" alt="#" loading="lazy">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="windows-checkboxes">
+                <input class="windows-checkboxes__input" id="windows-checkboxes-1" name="windows-checkboxes-1" type="checkbox" value="#" aria-label="Тонировка">
+                <input class="windows-checkboxes__input" id="windows-checkboxes-2" name="windows-checkboxes-2" type="checkbox" value="#" aria-label="Монтажные работы">
+                <input class="windows-checkboxes__input" id="windows-checkboxes-3" name="windows-checkboxes-3" type="checkbox" value="#" aria-label="Москитная сетка" checked>
+              </div>
+            </div>
+            <div class="windows-additionally__item">
+              <div class="windows-additionally__label windows-additionally__label--second">Особенности остекления</div>
+              <div class="windows-checkboxes">
+                <input class="windows-checkboxes__input" id="windows-checkboxes-4" name="windows-checkboxes-4" type="checkbox" value="#" aria-label="Тонировка">
+                <input class="windows-checkboxes__input" id="windows-checkboxes-5" name="windows-checkboxes-5" type="checkbox" value="#" aria-label="Монтажные работы">
+                <input class="windows-checkboxes__input" id="windows-checkboxes-6" name="windows-checkboxes-6" type="checkbox" value="#" aria-label="Москитная сетка" checked>
+                <input class="windows-checkboxes__input" id="windows-checkboxes-7" name="windows-checkboxes-7" type="checkbox" value="#" aria-label="Москитная сетка">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </li>
+    </ul>
+    <div class="calculator-result">
+      <div class="calculator-result__inner">
+        <div class="calculator-result__content">
+          <div class="calculator-result__price">
+            <div class="calculator-result__title">
+              <div class="calculator-result__icon" aria-hidden="true">
+                <svg width="29" height="29">
+                  <use xlink:href="#icon-calculator"></use>
+                </svg>
+              </div>
+              <div class="calculator-result__label">Стоимость ваших окон:</div>
+            </div>
+            <div class="calculator-result__value"><span>от&#32;<span>10&nbsp;195</span>&#32;рублей</span></div>
+          </div>
+          <div class="calculator-result__information">оформите заявку и получите скидку</div>
+        </div>
+        <button class="calculator-result__button button button--white" type="submit">
+          <span class="button__icon" aria-hidden="true">
+            <svg width="14" height="14">
+              <use xlink:href="#icon-new-tab"></use>
+            </svg>
+          </span>
+          <span class="button__text">Оформить заявку</span>
+        </button>
+      </div>
+      <p class="calculator-result__text">* Сайт носит информационный характер, перед покупкой обратитесь к менеджеру за точным и верным расчетом</p>
+    </div>
+  </form>
+</section>
