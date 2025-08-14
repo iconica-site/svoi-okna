@@ -4,7 +4,7 @@
 
 .h2 {
   font-weight: 700;
-  font-size: 45px;
+  font-size: 28px;
   line-height: 1.2;
   letter-spacing: -0.01em;
   color: var(--h2-color, #{variables.$color-404040});
@@ -12,6 +12,14 @@
   // .h2--white
   &--white {
     --h2-color: #{variables.$color-white};
+  }
+
+  @media (min-width: #{768 + 0.1px}) {
+    font-size: 35px;
+  }
+
+  @media (min-width: #{1024 + 0.1px}) {
+    font-size: 45px;
   }
 
   // .h2__mark
