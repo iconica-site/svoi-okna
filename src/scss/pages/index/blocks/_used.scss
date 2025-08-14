@@ -13,8 +13,11 @@
 
 .used-list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
+
+  @media (min-width: #{1024 + 0.1px}) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   // .used-list__item
   &__item {
@@ -23,29 +26,66 @@
 
 .used-card {
   display: grid;
-  grid-template-columns: calc(169 / 279.5 * 1fr) calc(390 / 279.5 * 1fr);
   align-items: center;
-  gap: 26px;
-  padding: 5px;
+  gap: 15px;
+  padding: 10px;
   background-color: variables.$color-f3faff;
+  border: 1px solid rgba($color: variables.$color-aabdf7, $alpha: 0);
   border-radius: 10px;
 
   &:has(.used-card__badge) {
-    align-items: start;
-    border: 1px solid variables.$color-aabdf7;
+    @media (min-width: #{768 + 0.1px}) {
+      align-items: start;
+    }
+  }
+
+  @include mixins.prefers-reduced-motion {
+    transition-property: border-color;
+    transition-duration: 0.3s;
+  }
+
+  @include mixins.hover {
+    border-color: variables.$color-aabdf7;
+  }
+
+  @media (min-width: #{480 + 0.1px}) {
+    grid-template-columns: 169px 1fr;
+    padding: 5px;
+  }
+
+  @media (min-width: #{1200 + 0.1px}) {
+    gap: 26px;
   }
 
   // .used-card__image
   &__image {
-    aspect-ratio: 169 / 219;
+    block-size: 219px;
     font-size: 0;
+    background-color: variables.$color-white;
     border-radius: 5px;
+
+    img {
+      object-fit: contain;
+    }
   }
 
   // .used-card__content
   &__content {
-    padding-block: 5px;
     padding-inline-end: 5px;
+
+    @media (min-width: #{480 + 0.1px}) {
+      padding-block: 10px;
+      padding-inline-end: 10px;
+    }
+
+    @media (min-width: #{1440 + 0.1px}) {
+      padding-block: 5px;
+      padding-inline-end: 5px;
+    }
+
+    @media (max-width: 768px) {
+      padding-inline-start: 5px;
+    }
 
     > *:last-child {
       margin-block-end: 0;
@@ -54,17 +94,25 @@
 
   // .used-card__badge
   &__badge {
-    margin-block-end: 11.5px;
+    margin-block-end: 6.5px;
     margin-inline-start: auto;
+
+    @media (min-width: #{1440 + 0.1px}) {
+      margin-block-end: 11.5px;
+    }
   }
 
   // .used-card__title
   &__title {
-    margin-block-end: 20px;
+    margin-block-end: 10px;
     font-weight: 700;
     font-size: 20px;
     letter-spacing: -0.01em;
-    color: variables.$color-404040;
+    color: variables.$color-2e2e2e;
+
+    @media (min-width: #{480 + 0.1px}) {
+      margin-block-end: 20px;
+    }
 
     a {
       @include mixins.prefers-reduced-motion {
@@ -80,17 +128,23 @@
 
   // .used-card__characteristics
   &__characteristics {
-    margin-block-end: 26px;
+    margin-block-end: 20px;
+
+    @media (min-width: #{480 + 0.1px}) {
+      margin-block-end: 26px;
+    }
   }
 
   // .used-card__button
   &__button {
-    --button-height: 40px;
+    --button-gap: 22px;
+    --button-height: 45px;
     --button-width: 155px;
-    --button-font-family: #{variables.$font-inter};
-    --button-font-weight: 500;
-    --button-letter-spacing: -0.01em;
-    --button-color: #{variables.$color-404040};
+    --button-color: #{variables.$color-2e2e2e};
+
+    @media (min-width: #{480 + 0.1px}) {
+      --button-height: 40px;
+    }
   }
 }
 
@@ -109,6 +163,10 @@
   color: variables.$color-f81255;
   background-color: variables.$color-white;
   border-radius: 30px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 
   // .used-badge__image
   &__image {
@@ -129,17 +187,30 @@
 
 .used-characteristics {
   display: grid;
-  grid-template-columns: repeat(2, auto);
   row-gap: 10px;
-  column-gap: 30px;
+  column-gap: 15px;
   inline-size: fit-content;
   letter-spacing: -0.01em;
 
+  @media (min-width: #{1200 + 0.1px}) {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  @media (min-width: #{1440 + 0.1px}) {
+    column-gap: 30px;
+  }
+
+  @media (max-width: 1200px) {
+    color: variables.$color-515151;
+  }
+
   // .used-characteristics__item
   &__item {
-    display: grid;
-    grid-template-columns: subgrid;
-    grid-column: span 2;
+    @media (min-width: #{1200 + 0.1px}) {
+      display: grid;
+      grid-template-columns: subgrid;
+      grid-column: span 2;
+    }
   }
 
   // .used-characteristics__label

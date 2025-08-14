@@ -3,21 +3,21 @@
 @use "../../variables/variables";
 
 .button {
-  --button-height: 50px;
+  --button-height: 60px;
 
   display: flex;
   align-items: center;
   justify-content: start;
-  gap: var(--button-gap, 22px);
+  gap: var(--button-gap, 20px);
   inline-size: 100%;
   max-inline-size: var(--button-width);
   min-block-size: var(--button-height);
   padding-block: 5px;
   padding-inline: 5px var(--button-padding-right, 15px);
-  font-family: var(--button-font-family, variables.$font-inter-tight);
-  font-weight: var(--button-font-weight, 700);
+  font-family: var(--button-font-family, variables.$font-inter);
+  font-weight: var(--button-font-weight, 500);
   font-size: 14px;
-  letter-spacing: var(--button-letter-spacing);
+  letter-spacing: var(--button-letter-spacing, -0.01em);
   text-wrap: balance;
   color: var(--button-color, variables.$color-white);
   background-color: var(--button-background-color, variables.$color-accent);
@@ -57,6 +57,12 @@
     --button-icon-background-color: var(--button-icon-background-color-hover, #{variables.$color-accent});
   }
 
+  @media (max-width: 768px) {
+    justify-content: center;
+    padding-inline-start: 15px;
+    text-align: center;
+  }
+
   // .button__icon
   &__icon {
     display: flex;
@@ -73,6 +79,10 @@
     @include mixins.prefers-reduced-motion {
       transition-property: color, background-color;
       transition-duration: 0.3s;
+    }
+
+    @media (max-width: 768px) {
+      display: none;
     }
   }
 
