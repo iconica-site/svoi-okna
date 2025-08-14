@@ -4,7 +4,7 @@
 
 .advantages {
   padding-block: 50px;
-  background-color: variables.$color-fafcfe;
+  background-color: variables.$color-f3faff;
 
   // .advantages__title
   &__title {
@@ -14,8 +14,11 @@
 
 .advantages-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 9px;
+
+  @media (min-width: #{1024 + 0.1px}) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
   // .advantages-list__item
   &__item {
@@ -23,16 +26,40 @@
 }
 
 .advantage-card {
-  padding: 30px;
-  background-color: variables.$color-f3faff;
+  display: grid;
+  align-items: center;
+  gap: 30px;
+  block-size: 100%;
+  padding: 20px;
+  background-color: variables.$color-white;
   border-radius: 10px;
+
+  @media (min-width: #{1440 + 0.1px}) {
+    padding: 30px;
+  }
+
+  @media (max-width: 1024px) {
+    @media (min-width: #{480 + 0.1px}) {
+      grid-template-columns: 185px 1fr;
+    }
+
+    @media (min-width: #{768 + 0.1px}) {
+      grid-template-columns: 329px 1fr;
+    }
+  }
 
   // .advantage-card__image
   &__image {
-    aspect-ratio: 334 / 216;
-    margin-block-end: 30px;
+    block-size: 216px;
     font-size: 0;
     border-radius: 10px;
+  }
+
+  // .advantage-card__content
+  &__content {
+    > *:last-child {
+      margin-block-end: 0;
+    }
   }
 
   // .advantage-card__title
