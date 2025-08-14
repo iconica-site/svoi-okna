@@ -14,7 +14,7 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    padding: 12px;
+    padding: 9px;
     background-image: linear-gradient(
       90deg,
       var(--marquee-background-color-1, #3d62eb) 30%,
@@ -32,6 +32,10 @@
         --marquee-background-color-1: #f81255;
         --marquee-background-color-2: #3d62eb;
       }
+    }
+
+    @media (min-width: #{480 + 0.1px}) {
+      padding: 12px;
     }
   }
 }
