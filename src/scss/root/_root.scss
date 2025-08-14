@@ -1,6 +1,18 @@
 @use "../variables/variables";
 
 :root {
-  --header-height: 132px;
+  --header-height: 55px;
   --outline-color: #{variables.$color-4b5563};
+
+  @media (min-width: #{480 + 0.1px}) {
+    --header-height: 70px;
+  }
+
+  @media (min-width: #{768 + 0.1px}) {
+    --header-height: 77px;
+  }
+
+  @media (min-width: #{1024 + 0.1px}) {
+    --header-height: 132px;
+  }
 }
