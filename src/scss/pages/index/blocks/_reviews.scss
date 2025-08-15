@@ -3,7 +3,11 @@
 @use "../../../variables/variables";
 
 .reviews {
-  padding-block: 50px 35px;
+  padding-block: 50px 25px;
+
+  @media (min-width: #{768 + 0.1px}) {
+    padding-block-end: 35px;
+  }
 
   // .reviews__title
   &__title {
@@ -12,8 +16,20 @@
 
   // .reviews__image
   &__image {
-    aspect-ratio: 1199.37 / 483;
+    aspect-ratio: 440 / 405;
     font-size: 0;
+
+    @media (min-width: #{768 + 0.1px}) {
+      aspect-ratio: 728 / 361;
+    }
+
+    @media (min-width: #{1024 + 0.1px}) {
+      aspect-ratio: 1199.37 / 483;
+    }
+
+    @media (max-width: 1024px) {
+      border-radius: 20px;
+    }
 
     img {
       object-fit: contain;

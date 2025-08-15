@@ -36,7 +36,7 @@ projectSections.forEach(projectSection => {
         slidesPerView: 4.64,
       },
     },
-    slidesPerView: 1.26,
+    slidesPerView: 1.28,
     spaceBetween: 10,
     rewind: true,
   });
