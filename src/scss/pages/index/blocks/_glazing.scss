@@ -4,10 +4,18 @@
 
 .glazing {
   display: grid;
-  grid-template-columns: calc(488 / 580 * 1fr) calc(672 / 580 * 1fr);
-  align-items: center;
-  gap: 40px;
+  align-items: end;
+  gap: 30px;
   padding-block: 50px 15px;
+
+  @media (min-width: #{1024 + 0.1px}) {
+    grid-template-columns: 430px 1fr;
+  }
+
+  @media (min-width: #{1440 + 0.1px}) {
+    grid-template-columns: 488px 1fr;
+    gap: 40px;
+  }
 
   // .glazing__content
   &__content {
@@ -18,16 +26,28 @@
 
   // .glazing__title
   &__title {
-    margin-block-end: 20px;
+    margin-block-end: 10px;
+
+    @media (min-width: #{480 + 0.1px}) {
+      margin-block-end: 20px;
+    }
   }
 
   // .glazing__text
   &__text {
-    max-inline-size: 485px;
-    margin-block-end: 30px;
-    font-size: 20px;
+    margin-block-end: 20px;
+    font-size: 18px;
     letter-spacing: -0.01em;
     color: variables.$color-404040;
+
+    @media (min-width: #{480 + 0.1px}) {
+      margin-block-end: 30px;
+    }
+
+    @media (min-width: #{1024 + 0.1px}) {
+      max-inline-size: 485px;
+      font-size: 20px;
+    }
 
     b {
       font-weight: 700;
@@ -42,24 +62,41 @@
   // .glazing__row
   &__row {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 10px;
-    max-inline-size: 549px;
   }
 
   // .glazing__button
   &__button {
     --button-gap: 30px;
-    --button-width: 276px;
-    --button-font-family: variables.$font-inter;
-    --button-font-weight: 500;
-    --button-letter-spacing: -0.01em;
+
+    @media (min-width: #{480 + 0.1px}) {
+      --button-width: 281px;
+    }
+
+    @media (min-width: #{768 + 0.1px}) {
+      --button-width: 291px;
+    }
+
+    @media (min-width: #{1024 + 0.1px}) {
+      --button-width: 281px;
+    }
+
+    @media (min-width: #{1200 + 0.1px}) {
+      --button-width: 301px;
+    }
   }
 }
 
 .glazing-slider {
-  aspect-ratio: 488 / 466;
+  block-size: 400px;
   border-radius: 10px;
+
+  @media (min-width: #{480 + 0.1px}) {
+    block-size: 100%;
+    min-block-size: 466px;
+  }
 
   // .glazing-slider__wrapper
   &__wrapper {
@@ -77,16 +114,37 @@
     --slider-arrow-width: 40px;
 
     position: absolute;
-    inset-block-end: 13px;
-    inset-inline-start: 50%;
     z-index: 2;
-    transform: translateX(-50%);
+    transform: translateY(-50%);
     pointer-events: none;
+
+    @media (min-width: #{480 + 0.1px}) {
+      inset-block-end: 13px;
+      inset-inline-start: 50%;
+      transform: translateX(-50%);
+    }
+
+    @media (min-width: #{1024 + 0.1px}) {
+      inset-block-end: 10px;
+    }
+
+    @media (min-width: #{1200 + 0.1px}) {
+      inset-block-end: 13px;
+    }
+
+    @media (max-width: 480px) {
+      inset-block-start: 50%;
+      inset-inline: 11px;
+    }
   }
 }
 
 .glazing-information {
   letter-spacing: -0.01em;
+
+  @media (max-width: 1024px) {
+    font-size: 14px;
+  }
 
   // .glazing-information__item
   &__item {
@@ -114,9 +172,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 13px;
-  min-block-size: 50px;
-  padding-inline: 22px;
+  gap: 21.33px;
+  inline-size: 100%;
+  min-block-size: 60px;
+  padding-inline: 23.57px;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: -0.01em;
@@ -125,11 +184,33 @@
   border: 1px solid variables.$color-d8dffb;
   border-radius: 30px;
 
+  @media (min-width: #{480 + 0.1px}) {
+    gap: 20.49px;
+    max-inline-size: 317px;
+    padding-inline: 22.64px;
+  }
+
+  @media (min-width: #{768 + 0.1px}) {
+    gap: 8.17px;
+    max-inline-size: 263px;
+    padding-inline: 16.95px;
+  }
+
+  @media (min-width: #{1024 + 0.1px}) {
+    gap: 6px;
+    max-inline-size: 303px;
+    padding-inline: 20px;
+  }
+
+  @media (min-width: #{1200 + 0.1px}) {
+    max-inline-size: 279px;
+  }
+
   // .glazing-present__image
   &__image {
     flex: 0 0 auto;
-    inline-size: 52px;
-    aspect-ratio: 52 / 50;
+    inline-size: 62px;
+    aspect-ratio: 62 / 60;
     font-size: 0;
 
     img {
