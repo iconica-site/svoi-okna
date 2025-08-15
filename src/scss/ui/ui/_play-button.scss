@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  inline-size: 60px;
+  inline-size: var(--play-button-size, 60px);
   aspect-ratio: 1 / 1;
   font-size: 0;
   color: variables.$color-f81255;
@@ -24,6 +24,8 @@
   }
 
   svg {
-    transform: translateX(4px);
+    width: var(--play-button-width, 18px);
+    height: var(--play-button-height, 22px);
+    transform: translateX(var(--play-button-translate, 3px));
   }
 }

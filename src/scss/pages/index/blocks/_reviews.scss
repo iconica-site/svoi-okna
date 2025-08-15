@@ -3,7 +3,7 @@
 @use "../../../variables/variables";
 
 .reviews {
-  padding-block: 50px 25px;
+  padding-block: 50px;
 
   @media (min-width: #{768 + 0.1px}) {
     padding-block-end: 35px;
