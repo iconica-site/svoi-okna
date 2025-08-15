@@ -19,7 +19,24 @@ projectSections.forEach(projectSection => {
       nextEl: nextArrow,
       prevEl: prevArrow,
     },
-    slidesPerView: 4.64,
+    breakpoints: {
+      "480.1": {
+        slidesPerView: 1.72,
+      },
+      "768.1": {
+        slidesPerView: 2.832,
+      },
+      "1024.1": {
+        slidesPerView: 3.816,
+      },
+      "1200.1": {
+        slidesPerView: 4.04,
+      },
+      "1440.1": {
+        slidesPerView: 4.64,
+      },
+    },
+    slidesPerView: 1.26,
     spaceBetween: 10,
     rewind: true,
   });

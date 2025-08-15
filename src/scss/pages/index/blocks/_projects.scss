@@ -4,7 +4,7 @@
 
 .projects {
   padding-block: 50px;
-  background-color: variables.$color-fafcfe;
+  background-color: variables.$color-f3faff;
 
   // .projects__header
   &__header {
@@ -13,6 +13,13 @@
     justify-content: space-between;
     gap: 20px;
     margin-block-end: 30px;
+  }
+
+  // .projects__arrows
+  &__arrows {
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 }
 
@@ -30,10 +37,14 @@
   // .projects-slider__image
   &__image {
     display: block;
-    aspect-ratio: 250 / 380;
+    block-size: 300px;
     margin-block-end: 20px;
     font-size: 0;
     border-radius: 10px;
+
+    @media (min-width: #{768 + 0.1px}) {
+      block-size: 380px;
+    }
   }
 
   // .projects-slider__label
