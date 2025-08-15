@@ -3,25 +3,51 @@
 @use "../../../variables/variables";
 
 .contacts {
-  position: relative;
-  isolation: isolate;
-  padding-block: 50px;
+  @media (min-width: #{768 + 0.1px}) {
+    position: relative;
+    isolation: isolate;
+    padding-block: 50px;
+  }
+
+  @media (max-width: 768px) {
+    --padding-inline: 0;
+  }
 
   // .contacts__map
   &__map {
-    position: absolute;
-    inset: 0;
-    z-index: -1;
     font-size: 0;
+
+    @media (min-width: #{768 + 0.1px}) {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+    }
+
+    @media (max-width: 768px) {
+      block-size: 212px;
+    }
   }
 }
 
 .contacts-address {
-  max-inline-size: 417px;
-  padding-block: 33px 40px;
-  padding-inline: 40px;
-  background-color: variables.$color-white;
-  border-radius: 20px;
+  padding-block: 20px 50px;
+  padding-inline: 15px;
+
+  @media (min-width: #{480 + 0.1px}) {
+    padding-inline: 20px;
+  }
+
+  @media (min-width: #{768 + 0.1px}) {
+    max-inline-size: 417px;
+    padding-block: 33px 52px;
+    padding-inline: 40px;
+    background-color: variables.$color-white;
+    border-radius: 20px;
+  }
+
+  @media (min-width: #{1024 + 0.1px}) {
+    padding-block-end: 40px;
+  }
 
   // .contacts-address__title
   &__title {
