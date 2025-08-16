@@ -26,6 +26,10 @@
   <symbol id="icon-clock" viewBox="0 0 20 20" stroke="none">
     <path d="M10 0c5.523 0 10 4.477 10 10s-4.477 10-10 10S0 15.523 0 10 4.477 0 10 0Zm0 4a1 1 0 0 0-1 1v5a1 1 0 0 0 .293.707l3 3a1 1 0 0 0 1.414-1.414L11 9.586V5a1 1 0 0 0-1-1Z" />
   </symbol>
+  <symbol id="icon-close" viewBox="0 0 24 25" stroke="none">
+    <path fill-rule="evenodd" d="M5.47 5.97a.75.75 0 0 1 1.06 0l12 12a.75.75 0 1 1-1.06 1.06l-12-12a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+    <path fill-rule="evenodd" d="M18.53 5.97a.75.75 0 0 1 0 1.06l-12 12a.75.75 0 0 1-1.06-1.06l12-12a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd" />
+  </symbol>
   <symbol id="icon-down" viewBox="0 0 16 16" stroke="none">
     <path d="m8.36 10.62 5.31-5.57a.5.5 0 0 0 0-.7.46.46 0 0 0-.67 0L8 9.6 3 4.35a.46.46 0 0 0-.67 0 .5.5 0 0 0 0 .7l5.3 5.57a.5.5 0 0 0 .73 0Z" />
   </symbol>
